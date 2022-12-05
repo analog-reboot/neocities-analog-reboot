@@ -1,0 +1,7 @@
+{
+    "name": "analog-reboot",
+    "main": "index.js",
+    "scripts": {
+        "build" : "echo \"nothing to build\""
+    }
+}

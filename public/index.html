@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://analog-reboot.neocities.org/favicon.ico" />
+    <title>analog-reboot</title>
+    <link href="/index.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+<body>
+<a name="top"></a>
+  <div class="headercontainer">
+  <div class="headertop">
+    <img src="https://analog-reboot.neocities.org/png-header/header-top.png" draggable=false>
+    </div>
+    <div class="headercontent">
+    <img src="https://analog-reboot.neocities.org/favicon.png" draggable=false alt="analog-reboot" width="26" height="26"> welcome home<br><br>
+    <sup>website best viewed on desktop</sup>
+    </div>
+    <div class="headerbottom">
+    <img src="https://analog-reboot.neocities.org/png-header/header-bot.png" draggable=false>
+    </div>
+  </div>
+
+<!-- NAVIGATION -->
+<div id="mydiv1" class="draggable">
+  <div id="mydiv1header"></div>
+  <p style="margin-left:10px; font-size: small">(drag me!)</p>
+    <p style="margin-left: 20px">
+      <a href="#introduction">about me</a><br>
+      <a href="#socials">my socials</a><br>
+      <a href="#welcome-note">welcome note</a><br>
+      <a href="#why-i-write">why i write</a><br>
+      <a href="#recommendations">recommendations</a>
+    </p>
+</div>
+
+
+<!-- UPDATES 
+<div id="mydiv2" class="draggable">
+  <div id="mydiv2header"></div>
+  <p style="margin-left:10px; font-size: small">(drag me!)</p>
+    <p style="margin-left: 10px">
+    <b>new updates</b><br>
+    <p style="margin-left:20px">
+      april 3: new <a href="https://analog-reboot.neocities.org/thoughts.html">thoughts</a> post<br>
+        <i>  - "international impacts of the stonewall riots"</i><br>
+    <p style="margin-left: 20px">
+      february 16th: new <a href="https://analog-reboot.neocities.org/prose.html">prose</a> post<br>
+        <i>  - "growing pains"</i><br>
+    </p>
+</div>
+-->
+
+<!--MAKES NAVIGATION DRAGGABLE-->
+<script>
+
+var draggableElements = document.getElementsByClassName("draggable");
+
+for(var i = 0; i < draggableElements.length; i++){
+    dragElement(draggableElements[i]);
+}
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+        elmnt.onmousedown = dragMouseDown;
+    }
+    function dragMouseDown(e) {
+        e = e || window.event;
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+        return false;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        pos1 = pos3 - parseInt(e.clientX);
+        pos2 = pos4 - parseInt(e.clientY);
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        console.log(elmnt.offsetTop)
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+</script>
+
+<!--RANDOMIZES LOCATION-->
+<script>
+function randomWindow() {
+    const contentBoxList = document.getElementsByClassName("draggable");
+    for (let index = 0; index < contentBoxList.length; index++) {
+        contentBoxList[index].style.left = (Math.floor(Math.random() * (window.innerWidth - contentBoxList[index].offsetWidth))) + "px";
+        contentBoxList[index].style.top = (Math.floor(Math.random() * (window.innerHeight - contentBoxList[index].offsetHeight))) + "px";
+    }
+}
+</script>
+<!--posts example
+  <div class="container">
+    <div class="top">
+          <img src="https://analog-reboot.neocities.org/png-post/post-top.png" draggable=false>
+    </div>
+  <div class="content">
+      <u><strong>title</strong></u><br>
+      <sup>date</sup> <br>
+      text
+      <br> <br>
+  </div>
+    <div class="bottom">
+      <img src="https://analog-reboot.neocities.org/png-post/post-bot.png" draggable=false>
+    </div>
+  </div>
+  <br>
+-->
+<!-- about me -->
+  <p id="introduction"></p>
+    <div class="container">
+    <div class="top">
+      <img src="https://analog-reboot.neocities.org/png-post/post-top.png" draggable=false>
+    </div>
+  <div class="content">
+      <u><strong>who runs this thing?</strong></u><br>
+      <sup> </sup> <br>
+      <b>name:</b> analog <br>
+      <b>age:</b> over 18 <br>
+      <b>pronouns:</b> it/itself <br>
+      <b>favourite things:</b> music, books, urban clutter. <br>
+      <b>favourite book:</b> <i>demian</i> by hermann hesse<br>
+      <b>favourite song:</b> <i>circles</i> by mac miller<br>
+      <br>
+  </div>
+    <div class="bottom">
+      <img src="https://analog-reboot.neocities.org/png-post/post-bot.png" draggable=false>
+    </div>
+  </div>
+<!--socials-->
+  <p id="socials"></p>
+  <div class="container">
+    <div class="top">
+      <img src="https://analog-reboot.neocities.org/png-post/post-top.png" draggable=false>
+    </div>
+  <div class="content">
+      <u><strong>where can i find you?</strong></u><br>
+      <sup> </sup> <br>
+      don't be shy, say hi <br>
+      <ul>
+      <li><a href="https://twitter.com/analog_reboot">twitter</a></li>
+      <li><a href="https://www.tumblr.com/blog/analog-reboot">tumblr</a></li>
+      </ul>
+      i take emails too. <br>
+      analog.reboot@gmail.com
+      <br><br>
+  </div>
+    <div class="bottom">
+      <img src="https://analog-reboot.neocities.org/png-post/post-bot.png" draggable=false>
+    </div>
+  </div>
+<!--greeting card-->
+  <p id="welcome-note"></p>
+  <div class="container">
+    <div class="top">
+      <img src="https://analog-reboot.neocities.org/png-post/post-top.png" draggable=false>
+    </div>
+  <div class="content">
+      <u><strong>need a greeting card?</strong></u><br>
+      <sup> </sup>
+      <p style="text-indent: 20px">
+      hey. welcome to the website. hope you enjoy your stay.</p>
+      <p style="text-indent: 20px">
+      you can call me analog. i'm a linguistics and language student right now.</p>
+      <p style="text-indent: 20px">
+      if anyone has any ideas on how to improve this website, hit me up. i'm kind of tragically awful at css and html so i'm winging it.</p>
+      <p style="text-indent: 20px">
+      feel free to message me on my twitter or shoot me an email.</p>
+      <br>
+  </div>
+  <div class="bottom">
+      <img src="https://analog-reboot.neocities.org/png-post/post-bot.png" draggable=false>
+    </div>
+  </div>
+<!--summary-->
+<p id="why-i-write"></p>
+  <div class="container">
+    <div class="top">
+      <img src="https://analog-reboot.neocities.org/png-post/post-top.png" draggable=false>
+    </div>
+  <div class="content">
+      <u><strong>so why the blog?</strong></u><br>
+      <sup> </sup>
+      <p style="text-indent: 20px">
+      after starting university, i've found myself stressing more and more over the idea of what writing "should" look like. i've fallen into the academic idea that you can't write on a subject unless you have a degree in said subject. i think that's kind of a load of shit, and i need an outlet to get my thoughts out without the pressure of my writing looking 'proper' or good. </p>
+      <p style="text-indent: 20px">
+      some of the writing here is from school, some is practice, some is just stuff i'm working on in my own time. all of it is writing i want to put out there, so i hope you enjoy it.</p>
+      <p style="text-indent: 20px">
+      i am also heavily inspired by k-punk, so if you've seen his work and know his stuff, you might see similarities. </p>
+      <p style="text-indent: 20px">
+      that being said, feel free to shoot me an email or a message on twitter. no promises i'll stop being scatterbrained enough to respond, but you're welcomed to chat.</p>
+      <br>
+  </div>
+    <div class="bottom">
+      <img src="https://analog-reboot.neocities.org/png-post/post-bot.png" draggable=false>
+    </div>
+  </div>
+<!--recommendations-->
+<p id="recommendations"></p>
+  <div class="container">
+    <div class="top">
+          <img src="https://analog-reboot.neocities.org/png-post/post-top.png" draggable=false>
+    </div>
+  <div class="content">
+      <u><strong>so what do you like?</strong></u><br>
+      <sup></sup> <br>
+      <b>books i recommend:</b>
+      <ul>
+        <li><i>no longer human</i> by dazai osamu </li>
+        <li><i>the sun also rises</i> by ernest hemingway </li>
+        <li><i>the house of the dead</i> by fyodor dostoevsky </li>
+        <li><i>on earth we're briefly gorgeous</i> by ocean vuong</li>
+      </ul>
+      <b>songs i recommend:</b>
+      <ul>
+        <li><i>past & present</i> by anatomy rabbit</li>
+        <li><i>all your fault (feat. gray)</i> by yugyeom</li>
+        <li><i>어떻게 말해 (how can i say)</i> by day6</li>
+        <li><i>astronomy</i> by conan gray</li>
+        <li><i>lily</i> by ラックライフ(luck life)</li>
+        <li><i>Blue</i> by KOKORI</li>
+        <li><i>Hakuiki</i> by SherLock</li>
+      </ul>
+      <br>
+  </div>
+    <div class="bottom">
+      <img src="https://analog-reboot.neocities.org/png-post/post-bot.png" draggable=false>
+    </div>
+  </div>
+<!--THESE ARE NECESSARY TO KEEP POSTS FROM RUNNING INTO THE FOOTER AND LOOKING DUMB-->
+<br><br>
+<!--Footer-->
+<div class="start-bar">
+  <span class="start-button"><a href="https://analog-reboot.neocities.org/"><img src="https://analog-reboot.neocities.org/start%20bar/start-button1.png" alt="start button"></a></span>
+  <!--INDEX-->
+    <span class="start-bar-window"><a href="http://analog-reboot.neocities.org/index.html"> analog_reboot </a></span>
+  <!--THOUGHTS-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/thoughts.html"> thoughts </a></span>
+  <!--PROSE-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/prose.html"> prose </a></span>
+  <!--POETRY-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/poetry.html"> poetry </a></span>
+  <!--BAD IDEAS-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/bad-ideas.html"> ideas </a></span>
+<!-- HIDE THESE UNTIL YOU USE THEM
+  REVIEWS
+    <span class="start-bar-window"><a href="http://analog-reboot.neocities.org/reviews.html"> reviews </a></span>
+-->
+  <span class="neighbour-tag">
+  <a href="https://analog-reboot.neocities.org"><img src="https://analog-reboot.neocities.org/start%20bar/neighbour-tag.png" alt="neighbour tag"></a>
+  </span>
+  <span class="made-by">
+    <a href="https://twitter.com/analog_reboot"><img src="https://analog-reboot.neocities.org/start%20bar/twitter.png" alt="twitter" width="12"></a> made by <a href="http://twitter.com/analog_reboot">analog</a>
+  </span>
+  <span class="made-by">
+    <a href="#top">back to top</a>
+  </span>  
+</div>
+<!--SCREEN WIDTH SCRIPT-->
+<script>
+function init()
+{
+var ua=navigator.userAgent.toLowerCase();
+var isMobile = 
+   screen.width < 500;
+if (isMobile) {
+    window.location = "https://analog-reboot.neocities.org/mobile-alert.html";
+}
+
+randomWindow();
+}
+
+window.onload = init;
+
+</script>
+</body>
+</html>

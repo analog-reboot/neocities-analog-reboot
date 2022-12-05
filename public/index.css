@@ -1,0 +1,291 @@
+/*fonts*/
+@font-face {
+    font-family: 'Flexi IBM VGA False';
+    src: url('fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
+         url('fonts/FlexiIBMVGAFalse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-BoldItalic.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Bold.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Regular.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Italic.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'F25 Bank Printer';
+    src: url('https://analog-reboot.neocities.org/fonts/F25BankPrinter-Bold.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/F25BankPrinter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'F25 Bank Printer';
+    src: url('https://analog-reboot.neocities.org/fonts/F25BankPrinter.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/F25BankPrinter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'W95FA';
+    src: url('https://analog-reboot.neocities.org/fonts/w95fa-webfont.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/w95fa-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* general items */
+body {
+  background-color: #018281;
+  font-family: 'Liberation Mono';
+}
+.header {
+margin:auto;
+text-align: center;
+font-size: 26px;
+background: white;
+width: 700px;
+padding: 10px;
+font-family: 'F25 Bank Printer';
+font-weight: normal;
+}
+/* header container */
+.headercontainer {
+  position: relative;
+  margin:auto;
+  width:720px;
+}
+.headertop {
+  margin:auto;
+  background:url(https://analog-reboot.neocities.org/png-header/header-top.png) no-repeat;
+  background:url(https://analog-reboot.neocities.org/png-header/header-mid.png) round;
+}
+.headercontent {
+  margin:auto;
+  background-image: url(https://analog-reboot.neocities.org/png-header/header-mid.png);
+  background-repeat: repeat-y;
+  padding-left: 30px;
+  padding-right: 40px;
+  text-align: center;
+  font-size: medium;
+  font-family: 'F25 Bank Printer';
+}
+.headerbottom {
+    margin: auto;
+    background: url(https://analog-reboot.neocities.org/png-header/header-bot.png) no-repeat;
+}
+
+/*MOVABLE NAV CONTAINER*/
+
+.draggable {
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+#mydiv1 {
+  z-index: 9;
+  background: url(https://analog-reboot.neocities.org/alert-pngs/nav-mid-200.png) repeat-y;
+  font-size: medium;
+  text-align:left;
+  width: 200px;
+  border-color: black;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+#mydiv1header {
+  margin: auto;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background: url(https://analog-reboot.neocities.org/alert-pngs/nav-top-200.png) no-repeat;
+  color: #fff;
+}
+
+/*updates container*/
+
+#mydiv2 {
+  z-index: 8;
+  background: url(https://analog-reboot.neocities.org/alert-pngs/alert-bg.png) repeat-y;
+  font-size: medium;
+  text-align:left;
+  border-color: black;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  width:323px;
+}
+
+#mydiv2header {
+  margin: auto;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background: url(https://analog-reboot.neocities.org/alert-pngs/alert-top.png) no-repeat;
+  color: #fff;
+}
+
+/*ALERT CONTAINER*/
+
+#mydiv3 {
+  position: absolute;
+  top:35%; left:4%;
+  z-index: 9;
+  background: url(https://analog-reboot.neocities.org/alert-pngs/nav-mid-200.png) repeat-y;
+  font-size: medium;
+  text-align:left;
+  width: 200px;
+  border-color: black;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+#mydiv3header {
+  margin: auto;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background: url(https://analog-reboot.neocities.org/alert-pngs/alert-top-alert-200.png) no-repeat;
+  color: #fff;
+}
+
+/*FLEX CONTAINER*/
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/*FLEX ITEM*/
+.flex-item {
+  width: 323px;
+  color: black;
+  text-align: left;
+  margin:10px;
+}
+/*home page*/
+.container {
+  margin:auto;
+  width:720px;
+}
+.top {
+  margin:auto;
+  background: url(https://analog-reboot.neocities.org/png-post/post-top.png) no-repeat;
+  background: url(https://analog-reboot.neocities.org/png-post/post-mid.png) round;
+}
+.content {
+  margin:auto;
+  background-image: url(https://analog-reboot.neocities.org/png-post/post-mid.png);
+  background-repeat: repeat-y;
+  padding-left: 30px;
+  padding-right: 40px;
+  font-size: medium;
+}
+.bottom {
+  margin:auto;
+    background: url(https://analog-reboot.neocities.org/png-post/post-bot.png) no-repeat;
+}
+/*start bar and pagination*/
+.start-bar {
+    padding: 2px;
+    box-shadow: inset 1px 0 #fff;
+    display: block;
+    background-color: silver;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    z-index: 99999;
+    font-family: 'W95FA';
+}
+.start-button {
+  float:left;
+  padding-right: 3px;
+  font-family: 'W95FA';
+}
+.start-bar-window {
+    float: left;
+    padding: 0 10px 0 6px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    box-shadow: inset 1px 1px grey;
+    background-image: url(https://analog-reboot.neocities.org/start%20bar/backgroundwindow.png);
+    font-family: 'W95FA';
+}
+.made-by {
+    float: right;
+    text-align: right;
+    padding: 0 10px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    font-family: 'W95FA';
+}
+.neighbour-tag {
+  float:right;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-family: 'W95FA';
+}
+.made-by, .start-bar-window {
+    vertical-align: middle;
+    height: 31px;
+    line-height: 31px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: small;
+    color: #000;
+    font-family: 'W95FA';
+}

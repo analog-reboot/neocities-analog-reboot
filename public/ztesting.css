@@ -1,0 +1,155 @@
+/*general items*/
+@font-face {
+    font-family: 'Flexi IBM VGA False';
+    src: url('fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
+         url('fonts/FlexiIBMVGAFalse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-BoldItalic.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Bold.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Regular.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Italic.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'F25 Bank Printer';
+    src: url('https://analog-reboot.neocities.org/fonts/F25BankPrinter-Bold.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/F25BankPrinter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'F25 Bank Printer';
+    src: url('https://analog-reboot.neocities.org/fonts/F25BankPrinter.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/F25BankPrinter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'W95FA';
+    src: url('https://analog-reboot.neocities.org/fonts/w95fa-webfont.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/w95fa-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  font-family: 'Liberation Mono';
+  background-color: #018281;
+}
+
+p {
+margin: 0 0 0 2vh
+}
+/*NOTEPAD POSTS*/
+.draggable {
+  position: absolute;
+  text-align: center;
+}
+#post {
+  margin:auto;
+}
+.postheader {
+  background: url(https://analog-reboot.neocities.org/posts/post-top.png) no-repeat;
+  background: url(https://analog-reboot.neocities.org/posts/post-middle.png) round;
+}
+.postcontent {
+  text-align: left;
+  background-image: url(https://analog-reboot.neocities.org/posts/post-middle.png);
+  background-repeat: repeat-y;
+  font-size: medium;
+  font-family: 'Liberation Mono';
+}
+.postfooter {
+  background: url(https://analog-reboot.neocities.org/posts/post-bottom.png) no-repeat;
+}
+/*start bar and pagination*/
+.start-bar {
+    padding-top:2px;
+    box-shadow: inset 1px 0 #fff;
+    display: block;
+    background-color: silver;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    z-index: 99999;
+    font-family: 'W95FA';
+}
+.start-button {
+  float:left;
+  padding-right: 3px;
+  font-family: 'W95FA';
+}
+.start-bar-window {
+    float: left;
+    padding: 0 10px 0 6px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    box-shadow: inset 1px 1px grey;
+    background-image: url(https://analog-reboot.neocities.org/start%20bar/backgroundwindow.png);
+    font-family: 'W95FA';
+}
+.made-by {
+    float: right;
+    text-align: right;
+    padding: 0 10px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    font-family: 'W95FA';
+}
+.neighbour-tag {
+  float:right;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-family: 'W95FA';
+}
+.made-by, .start-bar-window {
+    vertical-align: middle;
+    height: 31px;
+    line-height: 31px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: small;
+    color: #000;
+    font-family: 'W95FA';
+}

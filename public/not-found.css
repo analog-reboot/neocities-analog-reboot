@@ -1,0 +1,77 @@
+/*general items*/
+@font-face {
+    font-family: "Flexi IBM VGA False";
+    src: url('https://analog-reboot.neocities.org/fonts/Flexi_IBM_VGA_False.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/Flexi_IBM_VGA_False.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  font-family: "Flexi IBM VGA False";
+  background-color: #018281;
+}
+/*error message*/
+.error {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+/*start bar and pagination*/
+.start-bar {
+    font-family:"Flexi IBM VGA False";
+    padding: 2px;
+    box-shadow: inset 1px 0 #fff;
+    display: block;
+    background-color: silver;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    z-index: 99999;
+}
+.start-button {
+  font-family:"Flexi IBM VGA False";
+  float:left;
+  padding-right: 3px;
+}
+.start-bar-window {
+    font-family:"Flexi IBM VGA False";
+    float: left;
+    padding: 0 10px 0 6px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    box-shadow: inset 1px 1px grey;
+    background-image: url(https://analog-reboot.neocities.org/start%20bar/backgroundwindow.png);
+}
+.made-by, .start-bar-window {
+    font-family:"Flexi IBM VGA False";
+    vertical-align: middle;
+    height: 22px;
+    line-height: 22px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: small;
+    color: #000;
+}
+.made-by {
+    font-family:"Flexi IBM VGA False";
+    float: right;
+    text-align: right;
+    padding: 0 10px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+.made-by, .start-bar-window {
+    font-family:"Flexi IBM VGA False";
+    vertical-align: middle;
+    height: 22px;
+    line-height: 22px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: small;
+    color: #000;
+}

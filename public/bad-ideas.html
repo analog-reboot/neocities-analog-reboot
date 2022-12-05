@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ideas</title>
+    <link href="/writing.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+<body>
+<a name="top"></a>
+  <div class="headercontainer">
+  <div class="headertop">
+    <img src="https://analog-reboot.neocities.org/png-header/header-top.png" draggable=false>
+    </div>
+    <div class="headercontent">
+    <img src="https://analog-reboot.neocities.org/favicon.png" draggable=false alt="analog-reboot" width="26" height="26"> all of my horrible ideas
+    <br>
+    <p style="font-size:small"> also functions as a to-do list for this god forsaken website </p><br>
+    </div>
+    <div class="headerbottom">
+    <img src="https://analog-reboot.neocities.org/png-header/header-bot.png" draggable=false>
+    </div>
+  </div>
+<br>
+<!--
+			<div id="post" class="draggable">
+				<div class="postheader">
+					<img src="https://analog-reboot.neocities.org/posts/post-top.png" draggable=false>
+				</div>
+				<div class="postcontent">
+				  text
+					<br>
+				</div>
+				<div class="postfooter">
+					<img src="https://analog-reboot.neocities.org/posts/post-bottom.png" draggable=false>
+				</div>
+			</div>
+-->
+
+<!--post one-->
+			<div id="post" class="draggable"><!--post container-->
+				<div class="postheader"><!--top of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-top.png" draggable=false>
+				</div>
+				<div class="postcontent"><!--content of post-->
+          verification box requirement before entering a website that asks your gender identity. there are the four standard options (he, she, they) and then a bunch of vague weird options like "14th of december", "six triangles", "family vacation to the bahamas". none of them affect how the website runs, except if you choose "he/him" in which case it just closes your browser window.
+					<br>
+				</div>
+				<div class="postfooter"><!--bottom of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-bottom.png" draggable=false>
+				</div>
+			</div>
+			
+			
+<!--post two-->
+			<div id="post" class="draggable"><!--post container-->
+				<div class="postheader"><!--top of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-top.png" draggable=false>
+				</div>
+				<div class="postcontent"><!--content of post-->
+          music player. that's it. i just want a music player that plays my funky liminal music (see: temporex and graham kartna)
+          <br>
+				</div>
+				<div class="postfooter"><!--bottom of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-bottom.png" draggable=false>
+				</div>
+			</div>
+<!--post 3-->
+      <div id="post" class="draggable"><!--post container-->
+				<div class="postheader"><!--top of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-top.png" draggable=false>
+				</div>
+				<div class="postcontent"><!--content of post-->
+				<b>completed</b><br>
+         <p style="font-size:small"><strike>post-box type that's draggable. use the same code from the alerts boxes and apply it. only problem: can't figure out how to incorporate the bottom ribbon from the posts into the draggable container. needs to be solved later. additionally: figure out how to randomize absolute position of div elements upon page refresh</strike></p><br>
+          done. wasn't as hard as i thought it was. the hardest part was applying the drag code to more than one object, but i got it. now their default window positions are random too.<br>
+				</div>
+				<div class="postfooter"><!--bottom of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-bottom.png" draggable=false>
+				</div>
+			</div>
+<!--post 4-->
+			<div id="post" class="draggable">
+				<div class="postheader">
+					<img src="https://analog-reboot.neocities.org/posts/post-top.png" draggable=false>
+				</div>
+				<div class="postcontent">
+				  exitable boxes. javascript button on upper right corner with the function to hide the div content. <br>
+				  problem: how do i float the button all the way to the right without fucking up my formatting
+					<br>
+				</div>
+				<div class="postfooter">
+					<img src="https://analog-reboot.neocities.org/posts/post-bottom.png" draggable=false>
+				</div>
+			</div>
+<!--post 5-->
+			<div id="post" class="draggable">
+				<div class="postheader">
+					<img src="https://analog-reboot.neocities.org/posts/post-top.png" draggable=false>
+				</div>
+				<div class="postcontent">
+				  music page for songs i like and recommend. sortable by language / mood / genre
+					<br>
+				</div>
+				<div class="postfooter">
+					<img src="https://analog-reboot.neocities.org/posts/post-bottom.png" draggable=false>
+				</div>
+			</div>
+			
+<!--end of posts-->
+<script>
+
+var draggableElements = document.getElementsByClassName("draggable");
+
+for(var i = 0; i < draggableElements.length; i++){
+    dragElement(draggableElements[i]);
+}
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+        elmnt.onmousedown = dragMouseDown;
+    }
+    function dragMouseDown(e) {
+        e = e || window.event;
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+        return false;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        pos1 = pos3 - parseInt(e.clientX);
+        pos2 = pos4 - parseInt(e.clientY);
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        console.log(elmnt.offsetTop)
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+</script>
+<script>
+function randomWindow() {
+    const contentBoxList = document.getElementsByClassName("draggable");
+    for (let index = 0; index < contentBoxList.length; index++) {
+        contentBoxList[index].style.left = (Math.floor(Math.random() * (window.innerWidth - contentBoxList[index].offsetWidth))) + "px";
+        contentBoxList[index].style.top = (Math.floor(Math.random() * (window.innerHeight - contentBoxList[index].offsetHeight))) + "px";
+    }
+}
+
+</script>
+
+<!--end of posts-->
+  <br> <br> <!--these are necessary to stop the posts from running into and under the footer and looking stupid-->
+<!--Footer-->
+<div class="start-bar">
+  <span class="start-button"><a href="https://analog-reboot.neocities.org/"><img src="https://analog-reboot.neocities.org/start%20bar/start-button1.png" alt="start button"></a></span>
+  <!--INDEX-->
+    <span class="start-bar-window"><a href="http://analog-reboot.neocities.org/index.html"> analog_reboot </a></span>
+  <!--THOUGHTS-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/thoughts.html"> thoughts </a></span>
+  <!--PROSE-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/prose.html"> prose </a></span>
+  <!--POETRY-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/poetry.html"> poetry </a></span>
+  <!--BAD IDEAS-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/bad-ideas.html"> ideas </a></span>
+<!-- HIDE THESE UNTIL YOU USE THEM
+  REVIEWS
+    <span class="start-bar-window"><a href="http://analog-reboot.neocities.org/reviews.html"> reviews </a></span>
+-->
+  <span class="neighbour-tag">
+  <a href="https://analog-reboot.neocities.org"><img src="https://analog-reboot.neocities.org/start%20bar/neighbour-tag.png" alt="neighbour tag"></a>
+  </span>
+  <span class="made-by">
+    <a href="https://twitter.com/analog_reboot"><img src="https://analog-reboot.neocities.org/start%20bar/twitter.png" alt="twitter" width="12"></a> made by <a href="http://twitter.com/analog_reboot">analog</a>
+  </span>
+  <span class="made-by">
+    <a href="#top">back to top</a>
+  </span>  
+</div>
+<script>
+function init()
+{
+var ua=navigator.userAgent.toLowerCase();
+var isMobile = 
+   screen.width < 500;
+if (isMobile) {
+    window.location = "https://analog-reboot.neocities.org/mobile-alert.html";
+}
+randomWindow();
+}
+
+window.onload = init;
+
+</script>
+</body>
+</html>

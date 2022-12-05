@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-wdith, initial-scale=1.0">
+	<title>testing</title>
+	<link href="/ztesting.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+      
+<!--posts-->
+
+<!--post one-->
+			<div id="post" class="draggable"><!--post container-->
+				<div class="postheader"><!--top of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-top.png" draggable=false>
+				</div>
+				<div class="postcontent"><!--content of post-->
+<p class="testParagraph">box</p>
+				</div>
+				<div class="postfooter"><!--bottom of post-->
+					<img src="https://analog-reboot.neocities.org/posts/post-bottom.png" draggable=false>
+				</div>
+			</div>
+<!--end of posts-->
+
+<!--Footer-->
+<div class="start-bar">
+  <span class="start-button"><a href="https://analog-reboot.neocities.org/"><img src="https://analog-reboot.neocities.org/start%20bar/start-button1.png" alt="start button"></a></span>
+  <!--INDEX-->
+    <span class="start-bar-window"><a href="http://analog-reboot.neocities.org/index.html"> analog_reboot </a></span>
+  <!--THOUGHTS-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/thoughts.html"> thoughts </a></span>
+  <!--PROSE-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/prose.html"> prose </a></span>
+  <!--POETRY-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/poetry.html"> poetry </a></span>
+  <!--BAD IDEAS-->
+    <span class="start-bar-window"><a href="https://analog-reboot.neocities.org/bad-ideas.html"> ideas </a></span>
+<!-- HIDE THESE UNTIL YOU USE THEM
+  REVIEWS
+    <span class="start-bar-window"><a href="http://analog-reboot.neocities.org/reviews.html"> reviews </a></span>
+-->
+  <span class="neighbour-tag">
+  <a href="https://analog-reboot.neocities.org"><img src="https://analog-reboot.neocities.org/start%20bar/neighbour-tag.png" alt="neighbour tag"></a>
+  </span>
+  <span class="made-by">
+    <a href="https://twitter.com/analog_reboot"><img src="https://analog-reboot.neocities.org/start%20bar/twitter.png" alt="twitter" width="12"></a> made by <a href="http://twitter.com/analog_reboot">analog</a>
+  </span>
+  <span class="made-by">
+    <a href="#top">back to top</a>
+  </span>  
+</div>
+
+
+<!--SCRIPT-->
+<script>
+
+var draggableElements = document.getElementsByClassName("draggable");
+
+for(var i = 0; i < draggableElements.length; i++){
+    dragElement(draggableElements[i]);
+}
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+        elmnt.onmousedown = dragMouseDown;
+    }
+    function dragMouseDown(e) {
+        e = e || window.event;
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+        return false;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        pos1 = pos3 - parseInt(e.clientX);
+        pos2 = pos4 - parseInt(e.clientY);
+        pos3 = parseInt(e.clientX);
+        pos4 = parseInt(e.clientY);
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        console.log(elmnt.offsetTop)
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+
+</script>
+<script>
+function randomWindow() {
+    const contentBoxList = document.getElementsByClassName("draggable");
+    for (let index = 0; index < contentBoxList.length; index++) {
+        contentBoxList[index].style.left = (Math.floor(Math.random() * (window.innerWidth - contentBoxList[index].offsetWidth))) + "px";
+        contentBoxList[index].style.top = (Math.floor(Math.random() * (window.innerHeight - contentBoxList[index].offsetHeight))) + "px";
+    }
+}
+
+</script>
+<script>
+function init()
+{
+var ua=navigator.userAgent.toLowerCase();
+var isMobile = 
+   screen.width < 500;
+if (isMobile) {
+    window.location = "https://analog-reboot.neocities.org/mobile-alert.html";
+}
+randomWindow();
+}
+
+window.onload = init;
+
+</script>
+</body>
+
+</html>

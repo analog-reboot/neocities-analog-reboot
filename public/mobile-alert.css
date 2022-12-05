@@ -1,0 +1,20 @@
+/*general items*/
+@font-face {
+    font-family: "Flexi IBM VGA False";
+    src: url('https://analog-reboot.neocities.org/fonts/Flexi_IBM_VGA_False.woff2') format('woff2'),
+        url('https://analog-reboot.neocities.org/fonts/Flexi_IBM_VGA_False.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  font-family: "Flexi IBM VGA False";
+  background-color: #018281;
+}
+/*error message*/
+.error {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
