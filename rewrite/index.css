@@ -1,16 +1,16 @@
 /* FONTS*/
 @font-face {
     font-family: 'Flexi IBM VGA False';
-    src: url('fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
-         url('fonts/FlexiIBMVGAFalse.woff') format('woff');
+    src: url('/rewrite/fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
+        url('/rewrite/fonts/FlexiIBMVGAFalse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Liberation Mono';
-    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-BoldItalic.woff2') format('woff2'),
-        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-BoldItalic.woff') format('woff');
+    src: url('/rewrite/fonts/libmono/LiberationMono-BoldItalic.woff2') format('woff2'),
+        url('/rewrite/fonts/libmono/LiberationMono-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Liberation Mono';
-    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Bold.woff2') format('woff2'),
-        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Bold.woff') format('woff');
+    src: url('/rewrite/fonts/libmono/LiberationMono-Bold.woff2') format('woff2'),
+        url('/rewrite/fonts/libmono/LiberationMono-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'Liberation Mono';
-    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Regular.woff2') format('woff2'),
-        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Regular.woff') format('woff');
+    src: url('/rewrite/fonts/libmono/LiberationMono-Bold.woff2') format('woff2'),
+        url('/rewrite/fonts/libmono/LiberationMono-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'Liberation Mono';
-    src: url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff2/LiberationMono-Italic.woff2') format('woff2'),
-        url('https://analog-reboot.neocities.org/fonts/liberation%20mono/woff/LiberationMono-Italic.woff') format('woff');
+    src: url('rewrite/fonts/libmono/LiberationMono-Italic.woff2') format('woff2'),
+        url('rewrite/fonts/libmono/LiberationMono-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
     font-family: 'F25 Bank Printer';
-    src: url('https://analog-reboot.neocities.org/fonts/F25BankPrinter-Bold.woff2') format('woff2'),
-        url('https://analog-reboot.neocities.org/fonts/F25BankPrinter-Bold.woff') format('woff');
+    src: url('rewrite/fonts/F25BankPrinter-Bold.woff2') format('woff2'),
+        url('rewrite/fonts/F25BankPrinter-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -54,8 +54,8 @@
 
 @font-face {
     font-family: 'F25 Bank Printer';
-    src: url('https://analog-reboot.neocities.org/fonts/F25BankPrinter.woff2') format('woff2'),
-        url('https://analog-reboot.neocities.org/fonts/F25BankPrinter.woff') format('woff');
+    src: url('rewrite/fonts/F25BankPrinter.woff') format('woff2'),
+        url('rewrite/fonts/F25BankPrinter.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -63,8 +63,8 @@
 
 @font-face {
     font-family: 'W95FA';
-    src: url('https://analog-reboot.neocities.org/fonts/w95fa-webfont.woff2') format('woff2'),
-        url('https://analog-reboot.neocities.org/fonts/w95fa-webfont.woff') format('woff');
+    src: url('rewrite/fonts/w95fa-webfont.woff2') format('woff2'),
+        url('rewrite/fonts/w95fa-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -76,34 +76,33 @@ body{
     background-color: #018281;
 }
 
-p {
-    margin: 0;
-    }
-
 .headerp {
-    margin: 0;
-    }
-
-/*HEADER*/
-.header {
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    font-size: 3vh;
     text-align: center;
-    font-size: larger;
-    background: white;
-    width: fit-content;
-    padding: 2vh;
-    font-family: 'F25 Bank Printer';
-    font-weight: normal;
 }
+
 /*HEADER CONTAINER*/
 .headercontainer {
     position: relative;
+    margin: auto;
+    width: 10vh;
 }
 .headertop {
-    background:url ('photos/header/header-top.png') no-repeat;
+    margin: auto;
+    background:url('photos/header/header-top.png') no-repeat;
+    background:url('photos/header/header-mid.png') repeat-y;
 }
 .headercontent {
+    margin: auto;
     background:url('photos/header/header-mid.png') repeat-y;
 
 }
+.headerbottom {
+    margin: auto;
+    background:url('photos/header/header-bot.png') no-repeat;
+}
 
-/*i dont remember how toast got rid of the gapteeth between the top and the content so ill figure it out later*/
+/*i cant figure out how to center it right now */
+
