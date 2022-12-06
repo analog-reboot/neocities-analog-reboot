@@ -77,12 +77,15 @@ body{
 }
 
 p {
-    margin: 0 0 0 2vh
-}
+    margin: 0;
+    }
+
+.headerp {
+    margin: 0;
+    }
 
 /*HEADER*/
 .header {
-    margin:auto;
     text-align: center;
     font-size: larger;
     background: white;
@@ -94,7 +97,6 @@ p {
 /*HEADER CONTAINER*/
 .headercontainer {
     position: relative;
-    margin: auto;
 }
 .headertop {
     background:url ('photos/header/header-top.png') no-repeat;
