@@ -84,25 +84,83 @@ body{
 }
 
 /*HEADER CONTAINER*/
+
 .headercontainer {
-    position: relative;
-    margin: auto;
-    width: 10vh;
+    width: .3vw;
+    display: flex;
+    justify-content: center;
 }
 .headertop {
-    margin: auto;
+    width: .3vw;
     background:url('photos/header/header-top.png') no-repeat;
     background:url('photos/header/header-mid.png') repeat-y;
 }
 .headercontent {
-    margin: auto;
+    width: .3vw;
     background:url('photos/header/header-mid.png') repeat-y;
 
 }
 .headerbottom {
-    margin: auto;
+    width: .3vw;
     background:url('photos/header/header-bot.png') no-repeat;
 }
 
 /*i cant figure out how to center it right now */
 
+/*start bar and pagination*/
+.start-bar {
+    padding: 2px;
+    box-shadow: inset 1px 0 #fff;
+    display: block;
+    background-color: silver;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    z-index: 99999;
+    font-family: 'Liberation Mono';
+}
+.start-button {
+  float:left;
+  padding-right: 3px;
+  font-family: 'Liberation Mono';
+}
+.start-bar-window {
+    float: left;
+    padding: 0 10px 0 6px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    box-shadow: inset 1px 1px grey;
+    background-image: url(photos/start\ bar/backgroundwindow);
+    font-family: 'Liberation Mono';
+}
+.made-by {
+    float: right;
+    text-align: right;
+    padding: 0 10px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    font-family: 'Liberation Mono';
+}
+.neighbour-tag {
+  float:right;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-family: 'Liberation Mono';
+}
+.made-by, .start-bar-window {
+    vertical-align: middle;
+    height: 31px;
+    line-height: 31px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: small;
+    color: #000;
+    font-family: 'Liberation Mono';
+}
+/* fonts are fucked up on the start bar.
+still cant centre the header. 
+have not cleaned up the start bar. 
+wanted to see if it worked.*/
