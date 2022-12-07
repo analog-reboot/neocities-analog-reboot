@@ -71,15 +71,16 @@
 }
 
 /*BODY INFO*/
-body{
+body {
     font-family: 'Liberation Mono';
     background-color: #018281;
 }
 
 p {
     margin: 0 0 0 2vh
-    }
+}
 
+/*PARAGRAPH FORMATTING*/
 .headerp {
     margin-top: 0vh;
     margin-bottom: 0vh;
@@ -115,47 +116,55 @@ p {
     text-align: left;
     text-indent: 2.5vh;
 }
+
+/*DRAGGABLE NAV INFO*/
+
 /*HEADER CONTAINER*/
 
 .headertop {
     width: 55vw;
-    background:url('photos/header/header-top.png') no-repeat;
-    background:url('photos/header/header-mid.png') repeat-y;
+    background: url('photos/header/header-top.png') no-repeat;
+    background: url('photos/header/header-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
 }
+
 .headercontent {
     width: 55vw;
-    background:url('photos/header/header-mid.png') repeat-y;
+    background: url('photos/header/header-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
 }
+
 .headerbottom {
     width: 55vw;
-    background:url('photos/header/header-bot.png') no-repeat;
+    background: url('photos/header/header-bot.png') no-repeat;
     background-size: contain;
     margin: auto;
     padding-bottom: 1vw;
 }
+
 /*PAGE SIZE POST*/
 
 .posttop {
     width: 55vw;
-    background:url('photos/post/post-top.png') no-repeat;
-    background:url('photos/post/post-mid.png') repeat-y;
+    background: url('photos/post/post-top.png') no-repeat;
+    background: url('photos/post/post-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
 }
+
 .postcontent {
     width: 55vw;
-    background:url('photos/post/post-mid.png') repeat-y;
+    background: url('photos/post/post-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
     font-size: medium;
 }
+
 .postbottom {
     width: 55vw;
-    background:url('photos/post/post-mid.png') no-repeat;
+    background: url('photos/post/post-mid.png') no-repeat;
     background-size: contain;
     margin: auto;
     padding-bottom: 1vw;
@@ -164,8 +173,6 @@ p {
 /*POST FLEXBOX*/
 
 /*DRAGGABLE POSTS*/
-
-/*DRAGGABLE NAV INFO*/
 
 /*FULLY FUNCTIONING VERSION OF MINESWEEPER*/
 
@@ -186,11 +193,13 @@ p {
     z-index: 99999;
     font-family: 'W95FA';
 }
+
 .start-button {
-  float:left;
-  padding-right: 3px;
-  font-family: 'W95FA';
+    float: left;
+    padding-right: 3px;
+    font-family: 'W95FA';
 }
+
 .start-bar-window {
     float: left;
     padding: 0 10px 0 6px;
@@ -200,6 +209,7 @@ p {
     background-image: url(photos/start\ bar/backgroundwindow);
     font-family: 'W95FA';
 }
+
 .made-by {
     float: right;
     text-align: right;
@@ -208,13 +218,16 @@ p {
     border-left: 1px solid gray;
     font-family: 'W95FA';
 }
+
 .neighbour-tag {
-  float:right;
-  padding-left: 3px;
-  padding-right: 3px;
-  font-family: 'W95FA';
+    float: right;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: 'W95FA';
 }
-.made-by, .start-bar-window {
+
+.made-by,
+.start-bar-window {
     vertical-align: middle;
     height: 31px;
     line-height: 31px;
@@ -224,6 +237,9 @@ p {
     color: #000;
     font-family: 'W95FA';
 }
+
 /*
+going to make the navigation, already wrote links into html need to
+make css for div and html for actual chunk!
 have not cleaned up the start bar. 
 wanted to see if it worked.*/
