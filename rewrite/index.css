@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'Liberation Mono BI';
+    font-family: 'Liberation Mono';
     src: url('/rewrite/fonts/libmono/LiberationMono-BoldItalic.woff2') format('woff2'),
         url('/rewrite/fonts/libmono/LiberationMono-BoldItalic.woff') format('woff');
     font-weight: bold;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'Liberation Mono B';
+    font-family: 'Liberation Mono';
     src: url('/rewrite/fonts/libmono/LiberationMono-Bold.woff2') format('woff2'),
         url('/rewrite/fonts/libmono/LiberationMono-Bold.woff') format('woff');
     font-weight: bold;
@@ -35,9 +35,9 @@
 }
 
 @font-face {
-    font-family: 'Liberation Mono I';
-    src: url('rewrite/fonts/libmono/LiberationMono-Italic.woff2') format('woff2'),
-        url('rewrite/fonts/libmono/LiberationMono-Italic.woff') format('woff');
+    font-family: 'Liberation Mono';
+    src: url('/rewrite/fonts/libmono/LiberationMono-Italic.woff2') format('woff2'),
+        url('/rewrite/fonts/libmono/LiberationMono-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
     font-family: 'F25 Bank Printer';
-    src: url('rewrite/fonts/F25BankPrinter-Bold.woff2') format('woff2'),
-        url('rewrite/fonts/F25BankPrinter-Bold.woff') format('woff');
+    src: url('/rewrite/fonts/F25BankPrinter-Bold.woff2') format('woff2'),
+        url('/rewrite/fonts/F25BankPrinter-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -54,8 +54,8 @@
 
 @font-face {
     font-family: 'F25 Bank Printer';
-    src: url('rewrite/fonts/F25BankPrinter.woff') format('woff2'),
-        url('rewrite/fonts/F25BankPrinter.woff2') format('woff');
+    src: url('/rewrite/fonts/F25BankPrinter.woff') format('woff2'),
+        url('/rewrite/fonts/F25BankPrinter.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -83,22 +83,40 @@ p {
 .headerp {
     margin-top: 0vh;
     margin-bottom: 0vh;
+    margin-right: 3vh;
+    margin-left: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     text-align: center;
+    font-weight: bold;
 }
 
 .postp {
-    margin: 0 0 0 3vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-right: 4vh;
+    margin-left: 3vh;
     font-size: medium;
     font-family: 'Liberation Mono';
     text-align: left;
 }
+
+.indent {
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    margin-right: 4vh;
+    margin-left: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: medium;
+    font-family: 'Liberation Mono';
+    text-align: left;
+    text-indent: 2.5vh;
+}
 /*HEADER CONTAINER*/
 
-.headercontainer {
-    width: 55vw;
-    margin: auto;
-    padding: 10vh;
-}
 .headertop {
     width: 55vw;
     background:url('photos/header/header-top.png') no-repeat;
@@ -119,11 +137,8 @@ p {
     margin: auto;
     padding-bottom: 1vw;
 }
+/*PAGE SIZE POST*/
 
-.postcontainer {
-    width: 55vw;
-    margin: auto;
-}
 .posttop {
     width: 55vw;
     background:url('photos/post/post-top.png') no-repeat;
@@ -145,6 +160,17 @@ p {
     margin: auto;
     padding-bottom: 1vw;
 }
+
+/*POST FLEXBOX*/
+
+/*DRAGGABLE POSTS*/
+
+/*DRAGGABLE NAV INFO*/
+
+/*FULLY FUNCTIONING VERSION OF MINESWEEPER*/
+
+/*MAKING THE CLOSE BUTTON WORK*/
+
 /*start bar and pagination*/
 .start-bar {
     padding: 2px;
@@ -198,7 +224,6 @@ p {
     color: #000;
     font-family: 'W95FA';
 }
-/* fonts are fucked up on the start bar.
-still cant centre the header. 
+/*
 have not cleaned up the start bar. 
 wanted to see if it worked.*/
