@@ -117,7 +117,33 @@ p {
     text-indent: 2.5vh;
 }
 
-/*DRAGGABLE NAV INFO*/
+/*MOVABLE NAV CONTAINER*/
+
+.draggable {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+  }
+  
+  #mydiv1 {
+    z-index: 9;
+    background: url(https://analog-reboot.neocities.org/alert-pngs/nav-mid-200.png) repeat-y;
+    font-size: medium;
+    text-align:left;
+    width: 200px;
+    border-color: black;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+  
+  #mydiv1header {
+    margin: auto;
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background: url(https://analog-reboot.neocities.org/alert-pngs/nav-top-200.png) no-repeat;
+    color: #fff;
+  }
 
 /*HEADER CONTAINER*/
 
