@@ -1,8 +1,8 @@
 /* FONTS*/
 @font-face {
     font-family: 'Flexi IBM VGA False';
-    src: url('rewrite/fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
-        url('rewrite/fonts/FlexiIBMVGAFalse.woff') format('woff');
+    src: url('/rewrite/fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
+        url('/rewrite/fonts/FlexiIBMVGAFalse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -128,6 +128,7 @@ p {
   #mydiv1 {
     z-index: 9;
     background: url('/rewrite/photos/navigation/nav-mid-200.png') repeat-y;
+    font-family: 'W95FA';
     font-size: medium;
     text-align:left;
     width: 200px;
