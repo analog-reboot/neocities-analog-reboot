@@ -1,8 +1,8 @@
 /* FONTS*/
 @font-face {
     font-family: 'Flexi IBM VGA False';
-    src: url('/rewrite/fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
-        url('/rewrite/fonts/FlexiIBMVGAFalse.woff') format('woff');
+    src: url('rewrite/fonts/FlexiIBMVGAFalse.woff2') format('woff2'),
+        url('rewrite/fonts/FlexiIBMVGAFalse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -127,7 +127,7 @@ p {
   
   #mydiv1 {
     z-index: 9;
-    background: url(https://analog-reboot.neocities.org/alert-pngs/nav-mid-200.png) repeat-y;
+    background: url('/rewrite/photos/navigation/nav-mid-200.png') repeat-y;
     font-size: medium;
     text-align:left;
     width: 200px;
@@ -141,7 +141,7 @@ p {
     padding: 10px;
     cursor: move;
     z-index: 10;
-    background: url(https://analog-reboot.neocities.org/alert-pngs/nav-top-200.png) no-repeat;
+    background: url('/rewrite/photos/navigation/nav-top-200.png') no-repeat;
     color: #fff;
   }
 
@@ -149,22 +149,22 @@ p {
 
 .headertop {
     width: 55vw;
-    background: url('photos/header/header-top.png') no-repeat;
-    background: url('photos/header/header-mid.png') repeat-y;
+    background: url('/rewrite/photos/header/header-top.png') no-repeat;
+    background: url('/rewrite/photos/header/header-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
 }
 
 .headercontent {
     width: 55vw;
-    background: url('photos/header/header-mid.png') repeat-y;
+    background: url('/rewrite/photos/header/header-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
 }
 
 .headerbottom {
     width: 55vw;
-    background: url('photos/header/header-bot.png') no-repeat;
+    background: url('/rewrite/photos/header/header-bot.png') no-repeat;
     background-size: contain;
     margin: auto;
     padding-bottom: 1vw;
@@ -174,15 +174,15 @@ p {
 
 .posttop {
     width: 55vw;
-    background: url('photos/post/post-top.png') no-repeat;
-    background: url('photos/post/post-mid.png') repeat-y;
+    background: url('/rewrite/photos/post/post-top.png') no-repeat;
+    background: url('/rewrite/photos/post/post-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
 }
 
 .postcontent {
     width: 55vw;
-    background: url('photos/post/post-mid.png') repeat-y;
+    background: url('/rewrite/photos/post/post-mid.png') repeat-y;
     background-size: contain;
     margin: auto;
     font-size: medium;
@@ -190,7 +190,7 @@ p {
 
 .postbottom {
     width: 55vw;
-    background: url('photos/post/post-mid.png') no-repeat;
+    background: url('/rewrite/photos/post/post-mid.png') no-repeat;
     background-size: contain;
     margin: auto;
     padding-bottom: 1vw;
@@ -230,12 +230,12 @@ p {
   }
   .top {
     margin:auto;
-    background: url(https://analog-reboot.neocities.org/posts/post-top.png) no-repeat;
-    background: url(https://analog-reboot.neocities.org/posts/post-middle.png) round;
+    background: url('/rewrite/photos/post/post-top.png') no-repeat;
+    background: url('/rewrite/photos/post/post-mid.png') round;
 }
   .content {
     margin:auto;
-    background-image: url(https://analog-reboot.neocities.org/posts/post-middle.png);
+    background-image: url('/rewrite/photos/post/post-mid.png');
     background-repeat: repeat-y;
     padding-left: 30px;
     padding-right: 40px; 
@@ -244,7 +244,7 @@ p {
   }
   .bottom {
     margin:auto;
-      background: url(https://analog-reboot.neocities.org/posts/post-bottom.png) no-repeat;
+      background: url('/rewrite/photos/post/post-bot.png') no-repeat;
     }
 
   /*DRAGGABLE POSTS*/
@@ -281,7 +281,7 @@ p {
     border-top: 1px solid #000;
     border-left: 1px solid #000;
     box-shadow: inset 1px 1px grey;
-    background-image: url(photos/start\ bar/backgroundwindow);
+    background-image: url('/rewrite/photos/start bar/backgroundwindow.png');
     font-family: 'W95FA';
 }
 
