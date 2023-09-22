@@ -230,12 +230,15 @@ p {
   }
   .top {
     margin:auto;
+    width:480px;
     background: url('/rewrite/photos/post/post-top.png') no-repeat;
     background: url('/rewrite/photos/post/post-mid.png') round;
 }
   .content {
     margin:auto;
+    width:480px;
     background-image: url('/rewrite/photos/post/post-mid.png');
+    background-size: 480px;
     background-repeat: repeat-y;
     padding-left: 30px;
     padding-right: 40px; 
@@ -244,7 +247,9 @@ p {
   }
   .bottom {
     margin:auto;
-      background: url('/rewrite/photos/post/post-bot.png') no-repeat;
+    width:480px;
+    background: url('/rewrite/photos/post/post-bot.png') no-repeat;
+    background-size: 480px;
     }
 
   /*DRAGGABLE POSTS*/
